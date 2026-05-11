@@ -45,3 +45,20 @@ branch. After each merge, it opens (or updates) a "release PR" that
 aggregates Conventional Commits, bumps the version, and updates `CHANGELOG.md`.
 Merging that release PR cuts a tagged GitHub Release with auto-generated
 release notes.
+
+## Pre-commit hooks
+
+This repository uses [pre-commit](https://pre-commit.com) to run automated
+checks (formatting, linting, secret detection) on every commit. To enable it:
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+After installing, the hooks will run automatically each time you create a
+commit. You can also run them manually against all files:
+
+```bash
+pre-commit run --all-files
+```
